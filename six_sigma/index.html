@@ -1,0 +1,555 @@
+<!doctype html>
+<!-- Copyright: Daemon Pty Limited 2006, http://www.daemon.com.au
+     This program is free software: you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+     the Free Software Foundation, either version 2 of the License, or
+     (at your option) any later version.
+
+     This program is distributed in the hope that it will be useful,
+     but WITHOUT ANY WARRANTY; without even the implied warranty of
+     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+     GNU General Public License for more details.
+
+     You should have received a copy of the GNU General Public License
+     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Total Quality Management</title>
+
+<link rel="stylesheet" type="text/css" href="../css/main.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="../css/print.css" media="print" />
+<!--[if lte IE 6]>
+    <link rel="stylesheet" type="text/css" href="../css/ie6_or_less.css" />
+<![endif]-->
+
+<script type="text/javascript" src="../js/common.js"></script>
+</head>
+
+<body id="type-b">
+<div id="wrap">
+    <div id="header">
+        <div id="site-name">Total Quality Management</div>
+    </div>
+
+    <div id="content-wrap">
+
+        <!-- TODO: add sidebar navigation. -->
+
+        <div id="content">
+
+            <h1>Six Sigma Methodology</h1>
+
+			<p>Six sigma process was initially developed by Motorola in 1986, originally a 
+            tool for process improvement. It was made famous by Jack Welsh who 
+            introduced it as a key business strategy for General Electric in 1995 
+            and it took the name of Six Sigma process.</p>
+			
+			<p>"Six sigma is a disciplined, data-driven approach and methodology for 
+            eliminating defects (driving towards six standard deviations between the
+            mean and the nearest specification limit) in any process - 
+            from manufacturing to transactional and from product to service"[1]</p>
+			
+			<p>In this case of a PCB fabrication company, this will lead to an increase 
+            in the manufacturability of the product, PCBs.</p>
+            
+			<p>Definition of defect: A defect is any variation of a required characteristic
+            of the product or its parts, which is far enough removed from its nominal 
+            value to prevent the product from fulfilling the physical and functional 
+            requirements of the customer.</p>
+            
+			<p>There are six steps which can be implemented to put the six sigma method 
+            into practice, to improve the quality of a product, reduce the defects and 
+            increase the manufacturablity of a product, a six sigma process can be utilised.
+            This can be broken down into six steps.</p>
+            
+			<b>Six Steps of Six Sigma:</b>
+
+            <ol>
+                <li>Identify the product characteristics that are critical to satisfying 
+                both the physical and functional requirements of the customer and the 
+                requirements of relevant regulatory agencies.</li>
+                <li>Determine the specific product elements that contribute to 
+                achieving these critical characteristics.</li>
+                <li>According to product elements, determine the process step or 
+                process choice that controls each critical characteristic.</li>
+                <li>Determine a nominal design value and the maximum (real) 
+                allowable tolerance for each critical characteristic that 
+                still guarantees successful required performance.</li>
+                <li>Determine the capability for parts and process elements 
+                that control critical characteristics.</li>
+                <li>If the Capability Index Cp is not &ge; 2 (Cpk &ge; 1.5), 
+                then changes the design of the product and/or process to achieve Cp
+                &ge; 2 (or institute process control measures that will narrow process 
+                capability sufficiently to achieve Cp &ge; 2).</li>
+            </ol>
+	
+			<p>Where Cp is the process capability, this is covered in greater detail 
+            <a href = "#Cp">here</a>. It can be defined as the full range of normal process 
+			variation observed for a given characteristic curve:</p>
+            
+            <figure>
+                <img src="bell_curve.png" height="350" width="500">
+			    <figcaption>
+                 <i>Figure 1. - A normal dirtribution describing the outputs of a 
+                 certain characteristic of a product, taken from a sample. It shows the 
+                 variation of the samples outputs and where the majority of the 
+                 characteristics values lie.</i>
+                </figcaption>
+            </figure>
+	
+			<p>In a six sigma process, it is desired for at least 99.74% of the normal 
+            distribution to lie within the &plusmn;3&sigma;. Hence the name of six 
+            sigma arises as the process is within the 6 &sigma; -where &sigma; is the 
+			processes standard deviation.</p>
+
+			<p>Through out the manufacturing process, a target value is set for a product 
+            specification. This applies for a multi-step or single step manufacture 
+            process, the ideal product characteristic is defined as a desired functional
+			output which is defined in the initial design.</p>
+             
+			<p>During the manufacture process the target characteristic variation of 
+            products is the mean, as seen in the figure above. All the other variation 
+            should be within the tolerance limits. Limits which still allow for 
+            sufficient functionality. This includes a upper spec limit (USL) and a 
+            lower spec limit (LSL). These limits are set in the design. If the 
+            characteristics is out with the limits, it is considered to be non-functional.</p>
+            
+			<p>It is important to note that an unrealistic tight design tolerances, 
+            tighter than the customer requires, leads to the creation of defects.</p>
+
+            <p>However, there are effective methods to measure defects within the product.</p>
+  
+            <ul>
+                <li>Define and categories defects.</li>
+                <li>Illustrate that most manufacturing processes have a normal distribution
+                - 99% of the output products are with in a range of &plusmn;3&sigma;. 
+                Where &sigma; is the standard deviation of the process.</li>
+                <li>Cp and Cpk are essential measures of the product and the process design
+                - it defines th correlation of spec and process capability(Cp).</li>
+                <li>Cp and Cpk allow to predict the probable occurrence of random defects.</li>
+            </ul>
+
+            <p>The definition of a defect is described above and this leads onto the 
+            requirement to define the characteristics of products. These are:</p>
+
+            <ul>
+                <li>Variable: physical, measurable product characteristic.</li>
+                <li>Attribute: The comparison of a characteristic to a standard - judged 
+                good or bad (0 or 1). Eg. switch on or not. The standards can be set down 
+                the manufacturer or by a governing body.</li>
+            </ul>
+            
+			<p>The variation of variable product characteristics can be defined as:</p>
+            
+            <ul>
+                <li> Variable characteristics are specified by designers as a nominal value
+                 (target) with a tolerance about the target (variability).</li>
+                <li> Manufacturing processes attempt to produce everything at the target 
+                value.</li>
+                <li> Imperfect process lead to variation in the desired 
+                characteristic.</li>
+                <li> When depicting as a frequency histogram, this type of variation
+                 approximates a nominal distribution.</li>
+                <li> This holds true for the majority of process characteristics.</li>
+                <li> Standard deviation (&sigma;) - The standard deviation is a measure of 
+                dispersion or variability which quantifies values which lie outwith the 
+                population mean (when only a sample of the population is being described, 
+                standard deviation is more properly denoted by s).</li>
+            </ul>
+            
+			<p>Here is a graphical representation of the normal distribution curve. The 
+            frequency of a process occurring and as this is a six sigma process
+            each interval on the process characteristic axis is a measurement of 
+            standard deviation(&sigma;)</p>
+
+            <figure> 
+                <img src="Bell_curve2.png" height="350" width="500"/>
+				<figcaption>
+				    <i>Figure 2. - A normal distribution describing the outputs of a 
+                    certain characteristic of a product, taken from a sample.</p>It shows the 
+                    variation target value, mean (&micro;) and the standard deviation (&sigma;)
+                    of the process.</i>  
+                </figcaption>
+            </figure>
+            
+			<p>Z-Tables which is a method used to allow the identification of the 
+            probability that a variation will deviate from the nominal value. 
+            This applies for any specific value (Z), the area under the curve with 
+            a higher variation of Z is equal to the probability that a randomly 
+            selected member of the population (X) will be equal to or greater than Z.
+             Z is simply defined as the number of standard deviation elements from the
+            mean of the normal distribution and can be defined as:</p>
+            
+            <figure> 
+                <center><math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <mtable class="m-equation" displaystyle="true" style="display: block; margin-top: 1.0em; margin-bottom: 2.0em">
+                    	<mtr>
+                    		<mtd>
+                    			<mspace width="6.0em" />
+                    		</mtd>
+                    		<mtd columnalign="left">
+                    			<mi>Z</mi>
+                    			<mo>=</mo>
+                    			<mfrac linethickness="1">
+                    				<mrow>
+                    					<mi>X</mi>
+                    					<mo>+</mo>
+                    					<mi>&#x003BC;</mi>
+                    				</mrow>
+                    				<mi>&#x003C3;</mi>
+                    			</mfrac>
+                    		</mtd>
+                    		<mtd columnalign="right" style="width: 100%">
+                    			<mtext id="">(1)</mtext>
+                    			<mspace width="6.0em" />
+                    		</mtd>
+                    	</mtr>
+                    </mtable>
+                </math></center>
+                <figcaption> <i> Equation 1 - The occurrence of the of a value given the
+                 target value and the standard deviation</i>
+                </figcaption>
+            </figure>
+                    
+            <p>Therefore, the probability that a value (Z) will be greater than or equal to
+            the value can be seen in the shaded area of fig above. See z tables
+            <a href="http://www.stat.ufl.edu/~athienit/Tables/Ztable.pdf">here</a>.</p>
+         
+            <figure>
+                <img src="BellCurve_Z.png" height="300" width="450"/></p>
+                <figcaption>
+                  <i> Figure 3 - This figure shows the normal distribution curve, the shaded area
+                  is the probability that the value will lie within this region </i>
+                </figcaption>
+            </figure>
+            
+			<p>A similar <b>process</b> applies to the symmetrical opposite of the normal 
+            curve. -Z is equal to the probability that a randomly selected member of the
+            population (X) will be equal to or less than -Z.</p>
+            
+			<p>This progresses to the manufacture process capability definition:</p>
+            
+			<p>Defined as the full range of the normal process variation observed 
+            for a given characteristic. There are tolerances in every process, which give an 
+            upper and lower limit. To be in specification, it requires to define what is out 
+            with these limits and if out of these limits, the products are defective.</p>
+            
+			<p>Cp is a measure of how capable the process is of producing the required 
+            process characteristic, Process capability is defined as being between 
+            &plusmn;3&sigma;, i.e. 6&sigma;. This is not to be confused with a 6&sigma;
+             process.</p> 
+			 
+			<p>Cp is the design margin : Cp=  (USL-LSL)/6&sigma; (where USL and LSL are
+            upper and lower spec limits.)</p>
+            
+			<p>However, this does not account for a shift in the mean value.
+            The actual performance of the process - 
+            Cpk: Cpk=  ((min(USL-X<sup>-</sup> ),X<sup>-</sup>-USL))/3&sigma;</p>
+            
+			<p>Realized mean into account Cpk = Cp when the process mean is equal to 
+            nominal value. This takes into consideration the process mean not hitting 
+            the target value.</p>
+            
+			<p>Therefore: Cpk = Cp(1-K) where K = |Nominal - process mean|/0.5(USL-LSL).</p>
+            
+			<p>The maximization of Cp requires the joint and concurrent effort of both
+            product and process designers. Product design has the goal of increasing the
+            allowable tolerance to the maximum which will still permit successful 
+            function of the product. Process design has the goal of minimizing the 
+            variability of the process which reproduces the characteristic required for 
+            successful function of the product, and for centering the process on target
+            (nominal) value of the characteristic. A high Cp index indicates that the 
+            process is capable of reproducing the characteristic. (It makes no
+            statement about the centering of the process). A high Cpk index indicates
+            that the process is actually reproducing the characteristic within the 
+            desired limits. (It makes no statement about the inherent capability, 
+			other than its minimum value).</p>
+
+			<p>A six sigma processes will have 3.4 defects per million (dependent on the 
+            number of parts), if it has a high capability index. A very accurate process.</p>
+
+            <figure>
+                <img src="TableJpeg.jpg" height="300" width="530">
+                <figcaption>
+                    <i> Table 1 - This table refers the capability of the process and a 
+                    description of the value </i>
+                </figcaption>
+            </figure>
+            
+			<p>This allows for a to define a process which is has the ability to 
+            characterize the ability of the process, to evaluate whether the process 
+            is sufficiently meeting the requirements.</p>
+            
+			<p>This leads on to the parameter, yield: The number of useable products 
+			after the manufacture process.</p>
+            
+			<p>A highly manufacturable product exhibits very high yield in the factory, 
+			whereas a poorly manufacturable product does not. There are a number of 
+            definition of yield as can be seen in the equations below:</p>
+            
+            <figure>
+                <img src="Yield.png" height="250" width="400"/>
+                <figcaption>
+                    <i> Figure 4 - This figure lists some yield equations which are used to
+                    assess the output from the process </i>
+                </figcaption>
+            </figure>
+            
+			<p>The most useful yield is Rolled Yield- the number of useable products 
+            relative to the number of products processed.</p>
+            
+			<p>And First Time Yield - What percentage of the products 
+            manufactured are useable first time round.</p>
+            
+			<p>It is possible to detect a defect and repair it or scrap it. The yield in 
+            repairable and non-repairable products are:</p>
+            
+            <ul>
+                <li> Process yield for repairable product is virtually 100% - one unit 
+                completed for each unit started.</li>
+                <li> For non-repairable product, process yield may be significantly less 
+                then 100%, because of units declared unusable and scrapped.</li>
+                <li> Rolled yield - proportion of product that goes through entire process 
+                defect-free - is essentially the same as process yield for non-repairable 
+                product.</li>
+                <li> For repairable product, rolled yield may be significantly lower than 
+                process yield.</li>
+            </ul></p>
+            
+			<p>A more universal measurement is needed to measure the yield and is more
+            practical, there are 2 types of distribution: Uniform distribution and 
+            random distribution. Uniform being - same defect occurs in every unit of a batch
+            and random being - probability of failure to random units.</p>
+            
+            <p>Measurement of defects for attribute type data is defects per unit, 
+            which can relate over a range, even if 1 in a million.</p> 
+            
+            <figure>
+                <img src="dpu.png" height="70" width="250"/></p>
+				<figcaption> 
+                    <i>Equation 2 - A mathematical definition of defects per unit.</i>
+                </figcaption>
+            </figure>
+            
+            <p>This can apply to both single and multi-step processes.</p>
+            
+            <p>There are probability distributions which produce the probability of a 
+            defective product or process.</p>
+            
+            <p>Poisson describes the probability distribution of an event occurring with 
+            respect to time or space.<br/>More formally and mathematically:</p>
+            
+            <figure>
+                <img src="poisson.png" height="70" width="150"/> </p>
+                <figcaption>
+                    <i>Equation 3 - A mathematical definition of Poisson's 
+                       probability equation</i>
+                </figcaption>
+            </figure>
+            
+			<p>X - the number of events in a given time interval<br/>
+            &micro; - the mean event during the time interval</p>
+            
+            <p>Poisson can be described in a defect per unit form:</p>
+            
+            <figure>
+            <img src="poisson2.png" height="75" width="175"/>
+			    <figcaption>
+                    <i>Equation 4 - A mathematical definition of Poisson's 
+                    probability equation using dpu</i>
+                </figcaption>
+            </figure>
+            
+            <p>This gives the probability that a value has a defect, for example, 
+            if dpu of 1. There will be a probability of 36.78% that a product will
+            have a defect of some kind.</p>
+            
+            <p>Therefore, FTY in terms of dpu is FTY = e<sup>-dpu</sup></p>
+            
+            <p>The probability of no defects can be given by the FTY equation. 
+            Poission formula also predicts the probability that a product that
+            will have x defects in the manufacture process. Therefore, makes it possible
+            to calculate the distribution.</p>
+            
+            <p>An example could be:</p>
+            
+            <p>1000 DRAM chips are known to contain 500 defects. The dpu is 500/1000 = 0.5.
+            To find the defect per unit (dpu), it is important to split it into how 
+            many DRAM chips will have x defects. This can range from 0 to 7.<br/> 
+            Using the equation for the probability with dpu above it is possible to 
+            calculate the probability of the percentage will have that number of defects.<br/>
+            eg. For a DRAM device to have 3 defects: P{3} = 0.5<sup>3</sup>e<sup>-0.5</sup>/3!. 
+            This equals 0.0126 (1.26%). Out of 1000 unit, 13 units will have 3 defects.
+            Therefore, 39 defects in total.<br/>
+            This can be carried out for each defect value, from 0 to 7 and a 
+            distribution formed.</p>
+            
+            <p>To calculate the first time yield, the fabrication process is tested. 
+            the probability of it going through the entire fabrication process without 
+            a defect is simply the joint probability of the product passing all tests 
+            and inspections without a defect. 
+            In a multi-step process: P{A}xP{B}xP{C} = e<sup>-a</sup>xe<sup>-b</sup>xe
+            <sup>-c</sup></p> Where a,b and c are values of dpu.<br/>
+            The poisson distribution for the whole process is: P{process} = e<sup>-
+            (a+b+c)</sup></br>This is through exponentional multiplication</p>
+            
+            <p>By adding a the dpu levels this would give a rolled yield and not dependent
+            on the order of the process flow. To normalise products with different number of 
+            parts, part per million is used: ppm/part = 1000000 x dpu/parts count</p>
+            
+			<p>Bench marking is used to evaluate a process. The following steps are 
+            required:</p>
+            
+            <ol>
+                <li><strong>Determine the number of opportunities for error.</strong> 
+                For product, the number of opportunities for error is considered to be 
+                the total parts count. For other than product, consider the number of 
+                elements which go into the finished work (the number of fields in a data 
+                form, number of words on a page, number of operations performed, etc.)</li>	 
+                <li><strong>Measure the total defects per unit.</strong> For product, this
+                is measured in the factory.  For other than product, a measurement equivalent
+                to total defects per unit is needed. This may be derived from: First-time 
+                yield (FTY) or dpu = -ln (FTY)</li>
+                <li><strong>Calculate ppm per part.</strong> Ppm/part = 1000000 x dpu / 
+                parts count</li>
+                <li><strong>Estimate process capability.</strong> Determine sigma using 
+			    chart</li>
+            </ol> 
+			
+            <p>The increase in the capability of a process by optimising the steps 
+            above. Results in the FTY, which has an output of one of these:</p>
+            
+            <figure>
+                <img src="yieldpercent.png" height="50%" width="50%"/></p>
+				<figcaption>
+                    <i>Table 2 - A table linking deviation of a process and the 
+                    capability of the process</i>
+                </figcaption>
+			</figure>
+			
+            <p>It can be seen that a highly capable process results in a much higher FTY, 
+			also extending to a high complexity.<br/>
+            Also a highly capable process (C<sub>p</sub> = 2.0) there is a very high 
+			yield for products up to 17000 parts but quickly declines after.</br>
+            Therefore, this is the process which is sought after.</p>
+            
+			<p>Here is a comparison of a 6&sigma; and a 4&sigma; process:</p>
+            
+            <figure>
+                <img src="comp.png" height=height="350" width="500"/></p> 
+                <figcaption>
+                    <i>Figure 5 - The difference in normal distribution of a 4 &sigma; and 6 &sigma; 
+                    process</i>
+                </figcaption>
+            </figure>
+            
+			<p>A much larger output is possible from this process, as the limits are 
+            further from the target mean. Also, if a shift in the target value occurs;
+            a process which lies within spec, can contain defects:</p>
+            
+            <figure>
+                <img src="Shift.png" height=height="350" width="500"/></p>
+                <figcaption>
+                    <i>Figure 6 - 4&sigma; process with a shift in the process mean.</i>
+                </figcaption>
+            </figure>
+            
+			<p>This is a 4&sigma; process, if this is compared to a 6&sigma; process, the 
+            shift in target value due to an external effect, does not cause the process 
+            to be out of spec.</p>
+            
+            <figure>
+                <img src="Shift6.png" height="225" width="500"/></p>
+                <figcaption>
+                    <i>Figure 6 - 6&sigma; process with a shift in the process mean.</i>
+                </figcaption>
+            </figure>
+            
+			<p>This is a far superior process and the time and money invested in the 
+            possibility of this process results in a much more cost effective manufacture 
+			procedure with a higher yield.</p>
+            
+			<h2>Relationship between Reliability and Quality</h2>
+
+			<p>"Engineering reliability typically refers to the probability that a system, 
+            or any of its components, will perform a required function for a stated 
+            period of time and under specified operating conditions. As such, 
+            reliability is inextricably linked with time-dependent quality concepts, 
+            such as maintaining a state of control and predicting the chances of losses 
+            from failures for quality risk management. Two popular current good 
+            manufacturing practice (cGMP) and quality risk management tools, failure 
+            mode and effects analysis (FMEA) and root cause analysis (RCA) are examples 
+            of engineering reliability evaluations that link reliability with quality 
+            and risk." - 
+            [2]</p>
+            
+			<p>Manufacturing system reliability is a vital factor
+            in ensuring product quality and productivity in
+            a production process. Various efforts have been
+            made to analyze and optimise manufacturing-system
+            reliability in the component and system-design
+            stage. In general, system-reliability analysis is based
+            on component failures and the interdependency
+            among those components. Various methodologies or
+            techniques, such as fault-tree models, failure modes
+            and effect analysis (FMEA), block reliability diagram,
+            Petri nets, and the Markov model have been developed
+            for this purpose [3]</p>
+            
+			<p>The improved reliability of a product, commonly  links to the customers 
+            perception of 'quality', the more it performs the desired output the 
+            closer it is to the described product sold to the customer.</p>
+            
+			<p>Reliability extends past the output of the products and can cover the 
+            manufacturing process and the materials used.</p>
+            
+			<p>The consistency of a manufacturing process is important not cause much 
+            variability between products. The reliability of the process and the 
+            checks in the production line will ultimately result in a relabel product.</p>
+            
+			<p>The reliability of consistent materials will also lead to little variability 
+            in the products. Whether the material is out sourced, which include a 
+            reliable procurement, or from an internal source. The less defects the material 
+            has, the more reliable it is and the smaller defects between products.
+            Hence, the better quality as expressed above.</p>
+            
+			<p>Reliability of a product can be considered as quality over time. The 
+            ability for a product to maintain the desired output for an extended period.
+            This introduces the parameter of latent defects. if latent defects are 
+            present, this can compromise the reliability through a defect occurring 
+            after the product has been released.</p>  
+            
+			<p>There are practices which can be carried out to ensure quality:</p>
+            
+            <ul>
+                <li>cGMP - This mainly extends to food.</li>
+                <li>FMEA - On the top level, FMEA is a methodical approach to which has 
+                the capabilities to identify possible failures in a manufacturing process
+                or product. This is covered in greater detail[4] 
+                <a href = "http://asq.org/learn-about-quality/process-analysis-tools/overview/fmea.html">
+                here</a>, it covers the procedure required to carry out the practice.</li>
+                <li>RCA - Root cause analysis is a method of problem solving that 
+                tries to identify the root causes of faults or problems. A root cause is a 
+                cause that once removed from the problem fault sequence, prevents the 
+                final undesirable event from recurring, although there is no certainty it 
+                will not occur again.[5] - More details 
+                <a href = "http://en.wikipedia.org/wiki/Root_cause_analysis">here</a></li>
+            </ul>
+            
+			<p>The use of these practices it is possible to identify points of error and 
+            eliminate these errors to improve the reliability of the process and ultimately
+            the product. This is very applicable to a PCB fabrication process both to
+            identify the error to eliminate it occurring again. This can apply in a 
+            manufacturing process and ultimately the product.</p>
+            
+            <h2>Bibliography</h2>
+			<p>Underwood, Iain. Electronic Design and Manufacturabilty 3, 2013<br/>
+            [1] - <a> http://www.isixsigma.com/new-to-six-sigma/getting-started/what-six-sigma/</a> - accessed March 2015<br/>
+            [2] - <a> http://journal.pda.org/content/66/6/512.abstract</a>, accessed march 2015<br/>
+            [3] - Elsayed AE. Reliability Engineering. Addison Wesley Longman: Reading, MA, 1996.<br/>
+            [4] - <a> http://asq.org/learn-about-quality/process-analysis-tools/overview/fmea.html</a>, accessed march 2015<br/>
+            [5] - <a> http://en.wikipedia.org/wiki/Root_cause_analysis </a>, accessed March 2015</p>        
+    </body>
+</html>
