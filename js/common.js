@@ -17,3 +17,15 @@ sfHover = function() {
 }
 
 if (window.attachEvent) window.attachEvent("onload", sfHover);
+
+var anchor = document.getElementsByTagName("a");
+
+function fixHrefs() {
+    var anchor = document.getElementsByTagName("a");
+
+    for(var i=0; i<= anchor.length; i++) {
+            var href = anchor[i].href.replace(/%20/g,'');
+                anchor[i].href = href;
+    }
+}
+window.onload = fixHrefs;
